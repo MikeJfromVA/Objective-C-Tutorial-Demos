@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-@interface Foo
+@interface Foo:NSObject
 
 // AHA! Not allowed! 
 /*
