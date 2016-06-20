@@ -19,6 +19,7 @@ int main() {
     x = 43;
 
     logblock(myBlock);
+    NSLog(@"%i",x);
 
     __block int y;
     y = 62;

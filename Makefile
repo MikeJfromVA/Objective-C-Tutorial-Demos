@@ -1,9 +1,11 @@
-MFILES_DIRECTORY = $(wildcard *.m)
+MFILES_IN_DIR = $(wildcard *.m)
+HFILES_IN_DIR = $(wildcard *.h)
 EXECUTABLES = $(MFILES_BASIC:.m=)
+EXECUTABLES_WITH_HEADERS = $(HFILES_IN_DIR:.h=)
 
 # Special Cases
 
-MFILES_BASIC := $(MFILES_DIRECTORY)
+MFILES_BASIC := $(MFILES_IN_DIR)
 MFILES_BASIC := $(filter-out NewObjCFeatures.m,$(MFILES_BASIC))
 MFILES_BASIC := $(filter-out foundation.m,$(MFILES_BASIC))
 MFILES_BASIC := $(filter-out introspectionSelector.m,$(MFILES_BASIC))
@@ -31,6 +33,8 @@ mikeash: mikeash.m
 
 # Normal cases
 
+$(EXECUTABLES_WITH_HEADERS): %: %.h
+
 $(EXECUTABLES): %: %.m
 	$(CC) -g -o $@ $< -framework Foundation -fobjc-arc
 
@@ -39,7 +43,9 @@ clean:
 	rm -f $(EXECUTABLES) $(OTHERS)
 
 makedebug:
-	# MFILES_DIRECTORY $(MFILES_DIRECTORY)
+	# MFILES_IN_DIR $(MFILES_IN_DIR)
+	# HFILES_IN_DIR $(HFILES_IN_DIR)
 	# MFILES_BASIC $(MFILES_BASIC)
 	# EXECUTABLES $(EXECUTABLES)
+	# EXECUTABLES_WITH_HEADERS $(EXECUTABLES_WITH_HEADERS)
 	# OTHERS $(OTHERS)
