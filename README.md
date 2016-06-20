@@ -8,15 +8,15 @@ Any Mac with Xcode and Command-Line Tools installed should be sufficient to comp
 
 Ready for the codes? OK, here we go! :bowtie:
 
-**BasicsReview : **  Wow. Such code. Many basic. Wow.
+**BasicsReview :**  Wow. Such code. Many basic. Wow.
 
-**BinaryTree : ** An example of how elegant tree searches can be if you don't have to check for nil.
+**BinaryTree :** An example of how elegant tree searches can be if you don't have to check for nil.
 
-**Blocks : ** Block syntax and closures, where a closure is roughly an anonymous function reference that retains some of its surrounding state.
+**Blocks :** Block syntax and closures, where a closure is roughly an anonymous function reference that retains some of its surrounding state.
 
-**ClassReview : ** Very basic class, property, category, and selector demo.
+**ClassReview :** Very basic class, property, category, and selector demo.
 
-**Closure : ** Demo of how __block directs closures to capture local variables by reference rather than by value.
+**Closure :** Demo of how __block directs closures to capture local variables by reference rather than by value.
 
 **Laugh :** Class Cluster, similar to the Abstract Factory design pattern. A factory method creates the type of instance requested by the caller. Bonus comments about virtual methods in Objective-C.
 
